@@ -9,7 +9,7 @@ interface Props {
     animation: ToastProps['animation'];
 }
 
-const useToastState = ({ position, animation }: Props) => {
+const useToastState = ({ position, animation = 'zoomIn' }: Props) => {
     const showToast = useRef(new Animated.Value(0)).current;
     const zoomAnimation = useRef(new Animated.Value(0)).current;
     const animatedValue = useMemo(() => {

@@ -8,8 +8,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
@@ -48,7 +46,7 @@
   "react-native": "src/index.ts",
   "source": "src/index.ts",
   "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
+  "types": "lib/typescript/index.d.ts",
   "files": [
     "src",
     "lib",
