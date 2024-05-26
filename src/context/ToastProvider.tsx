@@ -91,8 +91,8 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
       <ToastContext.Provider value={value}>
         {children}
         <Toast
-          {...toast}
           message=""
+          {...toast}
           open={Boolean(toast)}
           onClose={onClose}
           theme={theme}

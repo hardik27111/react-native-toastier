@@ -13,6 +13,7 @@ const useToastState = ({ position, animation }: Props) => {
     const showToast = useRef(new Animated.Value(0)).current;
     const zoomAnimation = useRef(new Animated.Value(0)).current;
     const animatedValue = useMemo(() => {
+
         if (animation === 'slide' && position === 'bottom') {
             return 100;
         }
@@ -25,7 +26,7 @@ const useToastState = ({ position, animation }: Props) => {
         return -100
     }, [animation, position]);
 
-    const slideAnimation = useRef(new Animated.Value(animatedValue)).current;
+    const slideAnimation = new Animated.Value(animatedValue);
 
     const _animations = useMemo(() => [Animated.timing(showToast, {
         toValue: 1,

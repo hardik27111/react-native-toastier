@@ -10,7 +10,7 @@ export const enum ToastTypeEnum {
 type ContainerStyle = {
     color: string;
     backgroundColor: string;
-    borderColor: string;
+    borderColor?: string;
 }
 
 export type ToastProviderProps = Pick<ToastProps, 'animation' | 'position' | 'contentContainerStyle' | 'textContainerStyle' | 'textStyle'>
