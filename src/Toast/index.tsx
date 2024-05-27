@@ -5,7 +5,7 @@ import styled from './styles';
 import { Theme, ToastProps } from '../types';
 import useToastState from '../hooks/useToastState';
 
-export const duration = 15000;
+export const defaultDuration = 15000;
 
 interface Props {
   open?: boolean;
@@ -16,6 +16,7 @@ interface Props {
 const Toast = ({
   message,
   children,
+  duration: timing,
   theme: toastTheme,
   type = 'default',
   open,
@@ -32,6 +33,7 @@ const Toast = ({
   const { showToast, animation: Animation } = state;
   const { startAnimations, finishAnimations } = action;
   const Theme = useMemo(() => (toastTheme ? { toast: toastTheme } : theme), [theme, toastTheme])
+  const duration = timing || defaultDuration;
 
   const onDismiss = () => {
     if (onClose) {

@@ -13,7 +13,7 @@ type ContainerStyle = {
     borderColor?: string;
 }
 
-export type ToastProviderProps = Pick<ToastProps, 'animation' | 'position' | 'contentContainerStyle' | 'textContainerStyle' | 'textStyle'>
+export type ToastProviderProps = Pick<ToastProps, 'animation' | 'position' | 'duration' | 'contentContainerStyle' | 'textContainerStyle' | 'textStyle'>
 
 export interface Theme {
     success?: ContainerStyle;
@@ -25,6 +25,7 @@ export interface Theme {
 
 export interface ToastProps {
     message?: string;
+    duration?: number;
     children?: React.ReactNode;
     left?: React.ReactNode;
     right?: React.ReactNode;
