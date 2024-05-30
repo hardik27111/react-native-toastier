@@ -95,7 +95,7 @@ ToastService.show({
 ### ToastProvider Props
 
 | Prop          | Data type	  | Default  | Description |
-| ------------- |:-------------:| ---------:| -----:|
+| ------------- |:-------------:| :---------:| :-----:|
 | children      | ReactNode     | Required. | The children for context provider. |
 | theme      | Theme     | - | Update defualt toast theme. |
 | animation      | string     | zoomIn | The animation type to taost message. |
@@ -108,7 +108,7 @@ ToastService.show({
 ### Toast Service Options
 
 | Prop          | Data type	  | Default  | Description |
-| ------------- |:-------------:| ---------:| -----:|
+| ------------- |:-------------:| :---------:| :-----:|
 | message      | string     | - | The message to show. |
 | children      | ReactNode     | - | The children for custom  toast. |
 | left      | ReactNode     | - | The left component for a toast. |
