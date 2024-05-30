@@ -27,7 +27,7 @@ const Toast = ({
   textContainerStyle,
   textStyle,
   animation = 'zoomIn',
-  position = 'top'
+  position = 'bottom'
 }: ToastProps & Props) => {
   const { state, action } = useToastState({ position, animation })
   const { showToast, animation: Animation } = state;
@@ -94,13 +94,11 @@ const Toast = ({
                 {message}
               </Text>
             </View>
-
-            <TouchableOpacity style={{ padding: 20 }} onPress={hideToast}>
-              <Text style={[styled.styles.iconStyle, { color: Theme?.toast?.[type]?.color }]}>x</Text>
-            </TouchableOpacity>
           </>
         )}
-        {right ?? null}
+        {right ?? <TouchableOpacity style={{ padding: 20 }} onPress={hideToast}>
+          <Text style={[styled.styles.iconStyle, { color: Theme?.toast?.[type]?.color }, textStyle]}>x</Text>
+        </TouchableOpacity>}
       </View>
     </Animated.View>
   );

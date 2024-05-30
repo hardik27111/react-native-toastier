@@ -4,29 +4,30 @@ const colors = {
     black: '#000'
   },
   green: {
-    100: '#d7ebcc',
-    200: '#9bce80',
-    300: '#4ba61a'
+    100: '#eafaea',
+    200: '#98e698',
+    300: '#32cd32'
   },
   blue: {
-    100: '#cce2ff',
-    200: '#80b7ff',
-    300: '#1a7dff'
+    100: '#e5f4ff',
+    200: '#7fcaff',
+    300: '#0096FF'
   },
-  orange: {
-    100: '#fff1e6',
-    200: '#ffb780',
-    300: '#ff7d1a'
+  yellow: {
+    100: '#fdf8ea',
+    200: '#f9e6ad',
+    300: '#F1C232'
   },
   red: {
-    100: '#ec8d8d',
-    200: '#f7d1d1',
-    300: '#dc3131',
+    100: '#fdecea',
+    200: '#f9a19a',
+    300: '#F44336',
   },
   gray: {
-    100: '#fafafa',
-    200: '#eeeeee',
-    300: '#d0cfd0',
+    100: '#fcfcfc',
+    200: '#f2f1f0',
+    300: '#E5E4E2',
+    400: '#C0C0C0',
   },
 }
 
@@ -53,8 +54,8 @@ const toast = {
   },
   warning: {
     color: colors.base.white,
-    backgroundColor: colors.orange[300],
-    borderColor: colors.orange[300]
+    backgroundColor: colors.yellow[300],
+    borderColor: colors.yellow[300]
   }
 };
 

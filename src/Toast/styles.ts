@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    
   },
   toastContainer: {
     borderRadius: 12,
@@ -17,7 +18,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     margin: 10,
-    marginTop: getStatusBarHeight(),
+    marginTop: getStatusBarHeight(true) || 8,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   textContainer: {
     padding: 24,
