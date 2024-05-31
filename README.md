@@ -5,7 +5,7 @@ A Fully Customizable Toast Component for React Native.
 
 ## Demo
 <iframe width="180" height="400" src="https://github.com/hardik27111/react-native-toast/assets/61832417/7a3aaea0-cedb-4430-9058-8c4342d324e0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
 [![Watch the video](https://github.com/hardik27111/react-native-toast/assets/61832417/29e16b65-435f-4a62-b450-9efcad48ebc0)](https://github.com/hardik27111/react-native-toast/assets/61832417/7a3aaea0-cedb-4430-9058-8c4342d324e0)
 
 
