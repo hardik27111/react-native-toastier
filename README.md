@@ -4,8 +4,7 @@ A Fully Customizable Toast Component for React Native.
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Demo
-
-[]
+![](https://github.com/hardik27111/react-native-toast/blob/master/assets/demo.mp4)
 
 ## Installation
 
