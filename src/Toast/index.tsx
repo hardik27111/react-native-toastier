@@ -84,20 +84,20 @@ const Toast = ({
   return (
     <Animated.View
       style={[styled.styles.container, getPositionStyle(), { opacity: showToast }, Animation]}>
-      <View style={[styled.styles.toastContainer, Theme?.toast?.[type], contentContainerStyle]}>
+      <View style={[styled.styles.toastContainer, theme?.toast?.[type], Theme?.toast?.[type], contentContainerStyle]}>
         {left ?? null}
         {children ?? (
           <>
             <View style={[styled.styles.textContainer, textContainerStyle]}>
               <Text
-                style={[styled.styles.text, { color: Theme?.toast?.[type]?.color }, textStyle]}>
+                style={[styled.styles.text, { color: Theme?.toast?.[type]?.color || theme?.toast?.[type]?.color }, textStyle]}>
                 {message}
               </Text>
             </View>
           </>
         )}
         {right ?? <TouchableOpacity style={{ padding: 20 }} onPress={hideToast}>
-          <Text style={[styled.styles.iconStyle, { color: Theme?.toast?.[type]?.color }, textStyle]}>x</Text>
+          <Text style={[styled.styles.iconStyle, { color: Theme?.toast?.[type]?.color || theme?.toast?.[type].color }, textStyle]}>x</Text>
         </TouchableOpacity>}
       </View>
     </Animated.View>

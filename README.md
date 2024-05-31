@@ -1,10 +1,6 @@
 # react-native-toast
 A Toast component in React Native is a brief, non-blocking message that appears on the screen to provide feedback or notifications to users. It typically disappears automatically after a few seconds. This component is useful for showing short messages without interrupting user interactions, such as confirming actions or displaying status updates.
 
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
@@ -92,10 +88,13 @@ ToastService.show({
 ```
 
 ## Props
+
+Props can be passed from the provider (will apply to all toast) as well as from the toast service (will apply to a particular toast).
+
 ### ToastProvider Props
 
 | Prop          | Data type	  | Default  | Description |
-| ------------- |:-------------:| :---------:| :-----:|
+| ------------- |:-------------:| :---------:| :-----|
 | children      | ReactNode     | Required. | The children for context provider. |
 | theme      | Theme     | - | Update defualt toast theme. |
 | animation      | string     | zoomIn | The animation type to taost message. |
@@ -108,7 +107,7 @@ ToastService.show({
 ### Toast Service Options
 
 | Prop          | Data type	  | Default  | Description |
-| ------------- |:-------------:| :---------:| :-----:|
+| ------------- |:-------------:| :---------:| :-----|
 | message      | string     | - | The message to show. |
 | children      | ReactNode     | - | The children for custom  toast. |
 | left      | ReactNode     | - | The left component for a toast. |
@@ -121,6 +120,15 @@ ToastService.show({
 | textContainerStyle      | ViewStyle     | - | Update message container style for particulat toast. |
 | textStyle      | TextStyle     | - | Update toast message test style for particulat toast. |
 
+
+## Donation
+If you find my projects and contributions helpful, consider supporting me. Your support means a lot and helps me continue creating and sharing more cool stuff.
+<a href="https://www.buymeacoffee.com/hardikviradiya" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+## Hire
+
+I'm a skilled React and React Native developer ready to help with your project. Let's create something great together!
+Contact me <a herf='mailto:hardikviradiya27@gmail.com'>hardikviradiya27@gmail.com</a>
 
 ## License
 
