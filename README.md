@@ -1,10 +1,10 @@
-# react-native-toast
+# react-native-toastier
 A Fully Customizable Toast Component for React Native.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Demo
-[![Watch the video](https://github.com/hardik27111/react-native-toast/assets/61832417/29e16b65-435f-4a62-b450-9efcad48ebc0)](https://github.com/hardik27111/react-native-toast/assets/61832417/e141e03c-67e7-42c6-8da1-a9dfb292b0f7)
+[![Watch the video](https://github.com/hardik27111/react-native-toastier/assets/61832417/29e16b65-435f-4a62-b450-9efcad48ebc0)](https://github.com/hardik27111/react-native-toastier/assets/61832417/e141e03c-67e7-42c6-8da1-a9dfb292b0f7)
 
 
 
@@ -13,9 +13,9 @@ A Fully Customizable Toast Component for React Native.
 Install the package via npm or yarn
 
 ```bash
-  npm install react-native-toast
+  npm install react-native-toastier
   or
-  yarn add react-native-toast
+  yarn add react-native-toastier
 ```
 
 ## Usage/Examples
@@ -23,7 +23,7 @@ Install the package via npm or yarn
 Wrap your app in ToastProvider to provide context for the toast service.
 
 ```javascript
-import { ToastProvider } from 'react-native-toast'
+import { ToastProvider } from 'react-native-toastier'
 
 export default function App() {
   return (
@@ -37,7 +37,7 @@ export default function App() {
 Use the ToastService to display a toast message anywhere in the app.
 
 ```javascript
-import { ToastService } from './src/context/ToastProvider';
+import { ToastService } from 'react-native-toastier';
 
 export default function Component() {
 
@@ -97,6 +97,7 @@ Props can be passed from the provider (will apply to all toast) as well as from 
 
 ### ToastProvider Props
 
+
 | Prop          | Data type	  | Default  | Description |
 | ------------- |:-------------:| :---------:| :-----|
 | children      | ReactNode     | Required. | The children for context provider. |
@@ -109,6 +110,7 @@ Props can be passed from the provider (will apply to all toast) as well as from 
 | textStyle      | TextStyle     | - | To update toast message test style. |
 
 ### Toast Service Options
+
 
 | Prop          | Data type	  | Default  | Description |
 | ------------- |:-------------:| :---------:| :-----|
