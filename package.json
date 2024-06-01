@@ -5,7 +5,14 @@
     "name": "Hardik Viradiya",
     "email": "hardikviradiya27@gmail.com"
   },
-  "keywords": ["toast", "toasts", "react-native-toast", "react-native-snackbar", "snackbar", "toast message"],
+  "keywords": [
+    "toast",
+    "toasts",
+    "react-native-toast",
+    "react-native-snackbar",
+    "snackbar",
+    "toast message"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
@@ -14,7 +21,6 @@
     "prepare": "bob build"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-native": "0.74.1",
     "react-native-status-bar-height": "^2.6.0"

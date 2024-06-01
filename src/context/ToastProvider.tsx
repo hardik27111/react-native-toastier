@@ -5,7 +5,6 @@ import React, {
   useMemo,
   useState
 } from 'react';
-import noop from 'lodash/noop';
 import Toast, { defaultDuration } from '../Toast';
 import { Theme, ToastContextType, ToastProps, ToastProviderProps } from '../types';
 
@@ -13,6 +12,8 @@ interface Props {
   children: React.ReactNode,
   theme?: Theme
 }
+
+const noop = () => undefined; 
 
 const defaultValue: ToastContextType = {
   show: noop,
