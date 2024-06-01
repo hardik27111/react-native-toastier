@@ -6,7 +6,7 @@ import React, {
   useState
 } from 'react';
 import noop from 'lodash/noop';
-import Toast, { duration } from '../Toast';
+import Toast, { defaultDuration } from '../Toast';
 import { Theme, ToastContextType, ToastProps, ToastProviderProps } from '../types';
 
 interface Props {
@@ -41,7 +41,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
   const setToastTimeOut = useCallback(() => {
     const timeOutId = setTimeout(() => {
       onClose();
-    }, duration);
+    }, defaultDuration);
 
     setToastTimeOutId(timeOutId);
   }, [setToastTimeOutId]);
