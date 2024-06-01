@@ -5,6 +5,7 @@
     "name": "Hardik Viradiya",
     "email": "hardikviradiya27@gmail.com"
   },
+  "keywords": ["toast", "react-native-toast", "snackbar", "toast message"],
   "license": "MIT",
   "private": true,
   "scripts": {
