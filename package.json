@@ -41,7 +41,7 @@
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/hardik27111/react-native-toast#readme",
+  "homepage": "https://github.com/hardik27111/react-native-toastify#readme",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.ts",
   "source": "src/index.ts",
