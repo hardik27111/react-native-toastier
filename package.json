@@ -1,11 +1,11 @@
 {
-  "name": "react-native-toast",
+  "name": "react-native-toastify",
   "version": "1.0.0",
   "author": {
     "name": "Hardik Viradiya",
     "email": "hardikviradiya27@gmail.com"
   },
-  "keywords": ["toast", "react-native-toast", "snackbar", "toast message"],
+  "keywords": ["toast", "react-native-toast", "react-native-toastify", "snackbar", "toast message"],
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
