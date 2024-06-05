@@ -1,2 +1,10 @@
+node_modules/
+src/
+*.log
+*.lock
+.DS_Store
+*.tsbuildinfo
+coverage/
 example/
-.github/
+scripts/
+tests/
