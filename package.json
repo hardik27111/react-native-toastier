@@ -31,22 +31,13 @@
     "react-native-status-bar-height": "^2.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.74.83",
-    "@react-native/eslint-config": "0.74.83",
-    "@react-native/metro-config": "0.74.83",
     "@react-native/typescript-config": "0.74.83",
-    "@types/lodash": "^4.17.4",
     "@types/react": "^18.2.6",
-    "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-native-builder-bob": "^0.23.2",
-    "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
   "engines": {
@@ -66,7 +57,12 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "commonjs",
+      [
+        "commonjs",
+        {
+          "copyFlow": true
+        }
+      ],
       "module",
       "typescript"
     ]

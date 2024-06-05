@@ -42,18 +42,19 @@ const Toast = ({
   };
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout;
     if (open) {
       startAnimations()
 
-      const timeout = setTimeout(() => {
+      timeout = setTimeout(() => {
         hideToast();
         onDismiss();
       }, duration);
 
-      return () => clearTimeout(timeout);
     } else {
       hideToast();
     }
+    return () => clearTimeout(timeout);
   }, [open, duration, onDismiss, showToast]);
 
   const hideToast = () => {
