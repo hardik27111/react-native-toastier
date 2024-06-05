@@ -11,13 +11,18 @@
     "react-native-toast",
     "react-native-snackbar",
     "snackbar",
-    "toast message"
+    "toast message",
+    "react-native",
+    "notifications",
+    "alerts",
+    "animated",
+    "animation",
+    "message"
   ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
     "prepare": "bob build"
   },
   "dependencies": {
@@ -55,10 +60,7 @@
   "types": "lib/typescript/index.d.ts",
   "files": [
     "src",
-    "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
+    "lib"
   ],
   "react-native-builder-bob": {
     "source": "src",
