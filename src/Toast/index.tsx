@@ -32,7 +32,7 @@ const Toast = ({
   const { state, action } = useToastState({ position, animation })
   const { showToast, animation: Animation } = state;
   const { startAnimations, finishAnimations } = action;
-  const Theme = useMemo(() => (toastTheme ? { toast: toastTheme } : theme), [theme, toastTheme])
+  const Theme = { toast: toastTheme };
   const duration = timing || defaultDuration;
 
   const onDismiss = () => {
