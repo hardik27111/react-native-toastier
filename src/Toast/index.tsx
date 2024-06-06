@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import { Animated, Text, TouchableOpacity, View } from 'react-native';
 import theme from '../theme';
 import styled from './styles';
