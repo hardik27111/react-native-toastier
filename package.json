@@ -25,9 +25,11 @@
     "start": "react-native start",
     "prepare": "bob build"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.74.1",
     "react-native-status-bar-height": "^2.6.0"
   },
   "devDependencies": {
