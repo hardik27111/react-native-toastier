@@ -47,8 +47,7 @@
   },
   "homepage": "https://github.com/hardik27111/react-native-toastify#readme",
   "main": "lib/commonjs/index.js",
-  "react-native": "src/index.ts",
-  "source": "src/index.ts",
+  "react-native": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/index.d.ts",
   "files": [
