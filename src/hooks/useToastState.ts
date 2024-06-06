@@ -28,11 +28,11 @@ const useToastState = ({ position, animation = 'zoomIn' }: Props) => {
 
     const slideAnimation = new Animated.Value(animatedValue);
 
-    const _animations = useMemo(() => [Animated.timing(showToast, {
+    const _animations = [Animated.timing(showToast, {
         toValue: 1,
         duration: 300,
         useNativeDriver: true
-    })], [showToast]);
+    })];
 
     const startAnimations = () => {
         if (animation === 'zoomIn') {
