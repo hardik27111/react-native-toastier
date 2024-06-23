@@ -21,6 +21,7 @@ const Toast = ({
   type = 'default',
   open,
   onClose,
+  onOpen,
   left,
   right,
   contentContainerStyle,
@@ -36,15 +37,14 @@ const Toast = ({
   const duration = timing || defaultDuration;
 
   const onDismiss = () => {
-    if (onClose) {
-      onClose();
-    }
+      onClose?.();
   };
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     if (open) {
-      startAnimations()
+      onOpen?.();
+      startAnimations();
 
       timeout = setTimeout(() => {
         hideToast();
@@ -68,10 +68,6 @@ const Toast = ({
         return { top: 0 };
       case 'bottom':
         return { bottom: 0 };
-      case 'left':
-        return { left: 0 };
-      case 'right':
-        return { right: 0 };
       default:
         return { bottom: 0 };
     }

@@ -13,7 +13,7 @@ interface Props {
   theme?: Theme
 }
 
-const noop = () => undefined; 
+const noop = () => undefined;
 
 const defaultValue: ToastContextType = {
   show: noop,
@@ -31,7 +31,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
   const [routeName, setRouteName] = useState(null);
   const [toast, setToast] = useState<ToastProps | null>(null);
   const [toastTimeOutId, setToastTimeOutId] = useState<NodeJS.Timeout>();
-  const onClose = useCallback(() => setToast(null), []);
+  const onClose = useCallback(() => { toast?.onClose?.(); setToast(null) }, [toast]);
 
   const clearToastTimeOut = useCallback(() => {
     if (toastTimeOutId) {

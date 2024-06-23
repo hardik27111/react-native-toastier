@@ -1,7 +1,8 @@
 # react-native-toastier
 A Fully Customizable Toast Component for React Native.
 
-[![Version][version-badge]][package]
+![NPM Version](https://img.shields.io/npm/v/react-native-toastier)
+![NPM Downloads](https://img.shields.io/npm/dw/react-native-toastier)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Demo
