@@ -6,7 +6,9 @@ import React, {
   useState
 } from 'react';
 import Toast, { defaultDuration } from '../Toast';
+import { View } from 'react-native';
 import { Theme, ToastContextType, ToastProps, ToastProviderProps } from '../types';
+import styles from './styles';
 
 interface Props {
   children: React.ReactNode,
@@ -88,7 +90,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
   }, [value]);
 
   return (
-    <>
+    <View style={styles.styles.container}>
       <ToastContext.Provider value={value}>
         {children}
         <Toast
@@ -100,7 +102,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
           {...props}
         />
       </ToastContext.Provider>
-    </>
+    </View>
   );
 };
 

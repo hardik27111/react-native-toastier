@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,8 +16,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    margin: 10,
-    marginTop: getStatusBarHeight(true) || 8,
+    padding: 16,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -29,7 +27,6 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   textContainer: {
-    padding: 24,
     flex: 1,
   },
   text: {
