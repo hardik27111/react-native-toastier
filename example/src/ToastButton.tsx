@@ -11,7 +11,7 @@ const ToastButton = ({ label, onPress }: Props) => {
 	return (
 		<>
 			<TouchableOpacity style={styles.button} onPress={onPress} >
-				<Text>{label}</Text>
+				<Text style={{ color: '#000' }} >{label}</Text>
 			</TouchableOpacity>
 		</>
 	)

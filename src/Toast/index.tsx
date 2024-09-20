@@ -30,15 +30,11 @@ const Toast = ({
   animation = 'zoomIn',
   position = 'bottom'
 }: ToastProps & Props) => {
-  const { state, action } = useToastState({ position, animation })
+  const { state, action } = useToastState({ position, animation, onClose })
   const { showToast, animation: Animation } = state;
   const { startAnimations, finishAnimations } = action;
   const Theme = { toast: toastTheme };
   const duration = timing || defaultDuration;
-
-  const onDismiss = () => {
-      onClose?.();
-  };
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -48,17 +44,15 @@ const Toast = ({
 
       timeout = setTimeout(() => {
         hideToast();
-        onDismiss();
       }, duration);
 
     } else {
       hideToast();
     }
     return () => clearTimeout(timeout);
-  }, [open, duration, onDismiss, showToast]);
+  }, [open, duration, showToast]);
 
   const hideToast = () => {
-    onDismiss();
     finishAnimations();
   };
 

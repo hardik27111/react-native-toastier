@@ -7,9 +7,10 @@ const width = Dimensions.get('window').width;
 interface Props {
     position: ToastProps['position'];
     animation: ToastProps['animation'];
+    onClose: ToastProps['onClose'];
 }
 
-const useToastState = ({ position, animation = 'zoomIn' }: Props) => {
+const useToastState = ({ position, animation = 'zoomIn', onClose }: Props) => {
     const showToast = useRef(new Animated.Value(0)).current;
     const zoomAnimation = useRef(new Animated.Value(0)).current;
     const animatedValue = useMemo(() => {
@@ -73,7 +74,7 @@ const useToastState = ({ position, animation = 'zoomIn' }: Props) => {
                 useNativeDriver: true
             }))
         }
-        Animated.parallel(_animations).start();
+        Animated.parallel(_animations).start(() => onClose?.());
     }
 
     const _animation = useMemo(() => {
