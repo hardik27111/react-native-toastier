@@ -13,6 +13,7 @@ import styles from './styles';
 interface Props {
   children: React.ReactNode,
   theme?: Theme
+  toast?: ToastProps['children']
 }
 
 const noop = () => undefined;
@@ -99,6 +100,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
           open={Boolean(toast)}
           onClose={onClose}
           theme={theme}
+          children={props.toast || toast?.children}
           {...props}
         />
       </ToastContext.Provider>
