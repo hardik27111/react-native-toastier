@@ -11,9 +11,10 @@ import { Theme, ToastContextType, ToastProps, ToastProviderProps } from '../type
 import styles from './styles';
 
 interface Props {
-  children: React.ReactNode,
-  theme?: Theme
-  toast?: ToastProps['children']
+  children: React.ReactNode;
+  theme?: Theme;
+  toast?: ToastProps['children'];
+  offset?: number;
 }
 
 const noop = () => undefined;
@@ -101,6 +102,7 @@ const ToastProvider = ({ children, theme, ...props }: Props & ToastProviderProps
           onClose={onClose}
           theme={theme}
           children={props.toast || toast?.children}
+          offset={props.offset}
           {...props}
         />
       </ToastContext.Provider>

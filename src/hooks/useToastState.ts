@@ -8,24 +8,25 @@ interface Props {
     position: ToastProps['position'];
     animation: ToastProps['animation'];
     onClose: ToastProps['onClose'];
+    offset?: number;
 }
 
-const useToastState = ({ position, animation = 'zoomIn', onClose }: Props) => {
+const useToastState = ({ position, offset, animation = 'zoomIn', onClose }: Props) => {
     const showToast = useRef(new Animated.Value(0)).current;
     const zoomAnimation = useRef(new Animated.Value(0)).current;
     const animatedValue = useMemo(() => {
 
         if (animation === 'slide' && position === 'bottom') {
-            return 100;
+            return offset || 100;
         }
         if (animation === 'slideLeft') {
-            return -width;
+            return offset || -width;
         }
         if (animation === 'slideRight') {
-            return width
+            return offset || width
         }
-        return -100
-    }, [animation, position]);
+        return offset || -100
+    }, [animation, position, offset]);
 
     const slideAnimation = new Animated.Value(animatedValue);
 
@@ -94,7 +95,7 @@ const useToastState = ({ position, animation = 'zoomIn', onClose }: Props) => {
                 }
             ]
         }
-    }, [slideAnimation, zoomAnimation, animation])
+    }, [slideAnimation, zoomAnimation, animation, offset])
 
     return {
         state: {

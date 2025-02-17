@@ -11,6 +11,7 @@ interface Props {
   open?: boolean;
   onClose?: () => void;
   theme?: Theme
+  offset?: number;
 }
 
 const Toast = ({
@@ -27,10 +28,11 @@ const Toast = ({
   contentContainerStyle,
   textContainerStyle,
   textStyle,
+  offset,
   animation = 'zoomIn',
   position = 'bottom'
 }: ToastProps & Props) => {
-  const { state, action } = useToastState({ position, animation, onClose })
+  const { state, action } = useToastState({ position, animation, offset, onClose })
   const { showToast, animation: Animation } = state;
   const { startAnimations, finishAnimations } = action;
   const Theme = { toast: toastTheme };
