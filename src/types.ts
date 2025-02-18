@@ -49,6 +49,10 @@ export interface Theme {
 
 export interface ToastProps {
     /**
+    * Short title on action completion.
+    */
+    title?: string;
+    /**
     * Short message on action completion.
     */
     message?: string;

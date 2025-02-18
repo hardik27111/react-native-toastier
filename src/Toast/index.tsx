@@ -12,7 +12,6 @@ interface Props {
   onClose?: () => void;
   theme?: Theme
   offset?: number;
-  title?: string;
 }
 
 const Toast = ({
