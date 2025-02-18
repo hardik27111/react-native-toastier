@@ -22,7 +22,7 @@ type ContainerStyle = {
     borderColor?: string;
 }
 
-export type ToastProviderProps = Pick<ToastProps, 'animation' | 'position' | 'duration' | 'contentContainerStyle' | 'textContainerStyle' | 'textStyle'>
+export type ToastProviderProps = Pick<ToastProps, 'animation' | 'position' | 'duration' | 'contentContainerStyle' | 'textContainerStyle' | 'titleStyle' | 'messageStyle'>
 
 export interface Theme {
     /**
@@ -89,9 +89,13 @@ export interface ToastProps {
     */
     textContainerStyle?: StyleProp<ViewStyle>;
     /**
-    * Toast message text style.
+    * Toast message title style.
     */
-    textStyle?: StyleProp<TextStyle>;
+    titleStyle?: StyleProp<TextStyle>;
+    /**
+    * Toast message message style.
+    */
+    messageStyle?: StyleProp<TextStyle>;
     /**
     * Execute event after toast is appear.
     */

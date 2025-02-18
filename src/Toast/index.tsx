@@ -12,6 +12,7 @@ interface Props {
   onClose?: () => void;
   theme?: Theme
   offset?: number;
+  title?: string;
 }
 
 const Toast = ({
@@ -27,12 +28,19 @@ const Toast = ({
   right,
   contentContainerStyle,
   textContainerStyle,
-  textStyle,
+  messageStyle,
+  titleStyle,
   offset,
+  title,
   animation = 'zoomIn',
-  position = 'bottom'
+  position = 'bottom',
 }: ToastProps & Props) => {
-  const { state, action } = useToastState({ position, animation, offset, onClose })
+  const {state, action} = useToastState({
+    position,
+    animation,
+    offset,
+    onClose,
+  });
   const { showToast, animation: Animation } = state;
   const { startAnimations, finishAnimations } = action;
   const Theme = { toast: toastTheme };
@@ -47,7 +55,6 @@ const Toast = ({
       timeout = setTimeout(() => {
         hideToast();
       }, duration);
-
     } else {
       hideToast();
     }
@@ -69,29 +76,65 @@ const Toast = ({
     }
   };
 
-
   if (!open) {
     return null;
   }
 
   return (
     <Animated.View
-      style={[styled.styles.container, getPositionStyle(), { opacity: showToast }, Animation]}>
-      <View style={[styled.styles.toastContainer, theme?.toast?.[type], Theme?.toast?.[type], contentContainerStyle].flat()}>
+      style={[
+        styled.styles.container,
+        getPositionStyle(),
+        {opacity: showToast},
+        Animation,
+      ]}>
+      <View
+        style={[
+          styled.styles.toastContainer,
+          theme?.toast?.[type],
+          Theme?.toast?.[type],
+          contentContainerStyle,
+        ].flat()}>
         {left ?? null}
         {children ?? (
           <>
-            <View style={[styled.styles.textContainer, textContainerStyle].flat()}>
-              <Text
-                style={[styled.styles.text, { color: Theme?.toast?.[type]?.color || theme?.toast?.[type]?.color }, textStyle].flat()}>
-                {message}
-              </Text>
+            <View
+              style={[styled.styles.textContainer, textContainerStyle].flat()}>
+              {title && (
+                <Text
+                  style={[
+                    styled.styles.title,
+                    {color: Theme?.toast?.[type]?.color},
+                    titleStyle,
+                  ].flat()}>
+                  {title}
+                </Text>
+              )}
+              {message && (
+                <Text
+                  style={[
+                    styled.styles.message,
+                    {color: Theme?.toast?.[type]?.color || theme?.toast?.[type]?.color},
+                    messageStyle,
+                  ].flat()}>
+                  {message}
+                </Text>
+              )}
             </View>
           </>
         )}
-        {right ?? <TouchableOpacity style={{ padding: 20 }} onPress={hideToast}>
-          <Text style={[styled.styles.iconStyle, { color: Theme?.toast?.[type]?.color || theme?.toast?.[type].color }, textStyle].flat()}>x</Text>
-        </TouchableOpacity>}
+        {right ?? (
+          <TouchableOpacity style={{padding: 20}} onPress={hideToast}>
+            <Text
+              style={[
+                styled.styles.iconStyle,
+                {color: Theme?.toast?.[type]?.color || theme?.toast?.[type]?.color},
+                titleStyle,
+              ].flat()}>
+              x
+            </Text>
+          </TouchableOpacity>
+        )}
       </View>
     </Animated.View>
   );

@@ -30,9 +30,13 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
   },
-  text: {
+  title: {
     fontWeight: '600',
     fontSize: 14,
+  },
+  message: {
+    fontWeight: '600',
+    fontSize: 12,
   },
   actionContainer: {
     paddingBottom: 0,
