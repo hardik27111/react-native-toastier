@@ -123,7 +123,7 @@ const Toast = ({
           </>
         )}
         {right ?? (
-          <TouchableOpacity style={{padding: 20}} onPress={hideToast}>
+          <TouchableOpacity onPress={hideToast}>
             <Text
               style={[
                 styled.styles.iconStyle,
