@@ -6,7 +6,9 @@ A Fully Customizable Toast Component for React Native.
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Demo
-![React Native Toastier Demo](https://github.com/hardik27111/react-native-toastier/blob/master/assets/demo.gif?raw=true)
+<div style="display: flex; justify-content: center;">
+<img src="https://github.com/hardik27111/react-native-toastier/blob/master/assets/demo.gif?raw=true" height=500>
+</div>
 
 
 
