@@ -1,33 +1,31 @@
 {
   "name": "react-native-toastier",
-  "version": "2.0.4",
+  "version": "2.0.5",
+  "description": "React Native Toast message library for Android and iOS with animated and customizable toast notifications.",
   "author": {
     "name": "Hardik Viradiya",
     "email": "hardikviradiya27@gmail.com"
   },
+  "homepage": "https://github.com/hardik27111/react-native-toastier#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hardik27111/react-native-toastier.git"
+  },
   "keywords": [
-    "toast",
-    "toasts",
-    "react-native-component",
-    "react-native-components",
-    "react-native-elements",
-    "react-native-element",
-    "toastier",
-    "toastify",
-    "toastiers",
-    "short message",
-    "react native short message",
-    "react native toast message",
     "react-native-toast",
-    "react-native-snackbar",
-    "snackbar",
+    "react native toast",
+    "react native toast message",
+    "toast",
     "toast message",
     "react-native",
+    "react-native-snackbar",
+    "snackbar",
+    "toast notifications",
     "notifications",
     "alerts",
     "animated",
     "animation",
-    "message"
+    "toastier"
   ],
   "license": "MIT",
   "scripts": {
@@ -55,7 +53,6 @@
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/hardik27111/react-native-toastify#readme",
   "main": "lib/commonjs/index.js",
   "react-native": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
